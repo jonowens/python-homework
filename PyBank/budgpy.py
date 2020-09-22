@@ -15,8 +15,8 @@ greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
         number_of_months_in_budget (int): The number of months in the budget
         net_total_amount_of_profits_and_losses (int): The total amount of combined profits and losses.
         average_of_profit_and_losses (int): The average value of profits and losses.
-        greatest_change_dictionary (dict): 
-        greatest_decrease_of_losses_dictionary (): 
+        greatest_change_dictionary (dict): The greatest change with a 'date' and 'pnl' (profit and loss) index
+        greatest_decrease_of_losses_dictionary (dict):  The greatest decrease of losses with a 'date' and 'pnl' (profit and loss) index
 
     Output:
         Outputs summary message to screen and ./Output/summary.txt
@@ -53,8 +53,16 @@ greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
 def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, increase_or_decrease):
     """Determine the greatest increase or decrease in profits (date and amount) over the entire period.
     Change_in_profits_and_losses_list must contain dictionaries including 'date" and 'pnl' indicies.
-    The increase_or_decrease variable to pass indicates whether to find the greatest 'increase' in profits
-    or the greatest 'decrease' in profits."""
+
+    Args:
+        change_in_profits_and_losses_list (dict): Changes in profits and losses containing a 'date' and 'pnl'
+            (profit and loss) index.
+        increase_or_decrease (str): Indication to find the greatest "increase" in profits or 
+            the greatest "decrease" in profits.
+
+    Returns:
+        A dictionary of the greatest change with a 'date' and 'pnl' (profit and loss) index
+    """
 
     # Value to assign initial greatest increase or decrease in profits or losses
     initial_assignment_performed = 0
