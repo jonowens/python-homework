@@ -16,7 +16,7 @@
 ---
 
 ## General info
-
+    - The following repository contains two activities to 
 
 ---
 
