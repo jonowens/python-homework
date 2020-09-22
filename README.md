@@ -63,7 +63,9 @@
 
     ![Navigate to Repository for main.py](./Images/PyBank_Execute_Main.py.png)
 
-3. 
+3. The program runs and summary outputs to the screen and creates a summary.txt file in the OutPut directory of the PyBank folder.
+
+    ![PyBank Summary Output](./Images/PyBank_Output_Summary.png)
 
 ---
 
