@@ -59,7 +59,11 @@
 
     ![Navigate to Repository for main.py](./Images/PyBank_Path_Where_Main.py_Is_Located.png)
 
-2. 
+2. Execute the command 'python main.py' in the terminal.
+
+    ![Navigate to Repository for main.py](./Images/PyBank_Execute_Main.py.png)
+
+3. 
 
 ---
 
