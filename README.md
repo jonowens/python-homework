@@ -38,7 +38,9 @@
 ---
 
 ## Installation Guide
-
+1. Download entire python-homework repository
+2. Open repository in VS Code
+3. Run main.ipynb file
 
 ---
 
