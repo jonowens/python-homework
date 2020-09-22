@@ -39,13 +39,15 @@
 
 ## Installation Guide
 1. Download entire python-homework repository
-2. Open repository in VS Code
+2. Open Git Terminal
     
-    ![Repository in VS Code](./Images/PyBank_Repo_In_VS_Code.png)
+    ![Open Git Terminal](./Images/PyBank_Open_Git_Terminal.png)
 
-3. Run main.ipynb file
+3. Navigate into repository file path where the repository downloaded.
 
-    
+    ![Navigate to Repository](./Images/PyBank_Navigate_Into_Repo.png)
+
+*** An additional option is to 
 
 ---
 
