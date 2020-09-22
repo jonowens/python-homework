@@ -70,7 +70,9 @@
 ---
 
 ## Status
-Project is: _in progress_
+Project is:
+    - PyBank: _in progress_
+    - PyMenu: _in progress_
 
 ---
 
