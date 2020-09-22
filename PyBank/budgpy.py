@@ -9,7 +9,18 @@ from pathlib import Path
 def summary_output(number_of_months_in_budget, net_total_amount_of_profits_and_losses, average_of_profit_and_losses, 
 greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
     """Accepts metric variables and prints a standard output to the screen along with a summary.txt file to a Resources directory.
-    The dictionaries must contain 'date' and 'pnl' indecies."""
+    The dictionaries must contain 'date' and 'pnl' indecies.
+    
+    Args:
+        number_of_months_in_budget (int): The number of months in the budget
+        net_total_amount_of_profits_and_losses (int): The total amount of combined profits and losses.
+        average_of_profit_and_losses (int): The average value of profits and losses.
+        greatest_change_dictionary (dict): 
+        greatest_decrease_of_losses_dictionary (): 
+
+    Output:
+        Outputs summary message to screen and ./Output/summary.txt
+    """
 
     # Capture file path to be written
     output_path = Path("./Output/summary.txt")
