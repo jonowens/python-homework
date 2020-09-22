@@ -33,6 +33,7 @@
     * Jupyter Notebook - Version 6.1.1
     * Windows 10
     * Library - pathlib
+    * Library - budgpy
 
 ---
 
