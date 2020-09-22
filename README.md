@@ -28,11 +28,11 @@
 ---
 
 ## Technologies
-    - Python 3.8.5
-    - VS Code
-    - Git
-    - Git Hub
-    - 
+    * Python - Version 3.8.5
+    * VS Code - Version 1.49.1
+    * Jupyter Notebook - Version 6.1.1
+    * Windows 10
+    * Library - pathlib
 
 ---
 
