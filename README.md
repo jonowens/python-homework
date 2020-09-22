@@ -47,8 +47,6 @@
 
     ![Navigate to Repository](./Images/PyBank_Navigate_Into_Repo.png)
 
-*** An additional option is to 
-
 ---
 
 ## Code Examples
@@ -57,7 +55,11 @@
 ---
 
 ## Usage
+1. To run the process navigate to the directory where main.py is located using Git Terminal.
 
+    ![Navigate to Repository for main.py](./Images/PyBank_Path_Where_Main.py_Is_Located.png)
+
+2. 
 
 ---
 
