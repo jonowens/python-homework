@@ -126,21 +126,4 @@ def calculate_sum(list_of_dictionaries, key_name):
         # Add key values to sum variable
         sum += a_dictionary[key_name]
         
-    # Return sum
-
-test = [
-    {
-    'Name': "something",
-    'Num': 1234.00
-    },
-    {
-    'Name': "something else",
-    'Num': 5678.10
-    },
-    {
-    'Name': "something more",
-    'Num': 965210.25
-    }
-]
-
-calculate_sum(test, 'Num')
+    return sum
