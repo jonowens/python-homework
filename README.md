@@ -43,7 +43,7 @@ Output Summary
 2. Open Git Terminal
     
     ![Open Git Terminal](./Images/PyBank_Open_Git_Terminal.png)
-
+    
 3. Navigate into repository file path where the repository downloaded.
 
     ![Navigate to Repository](./Images/PyBank_Navigate_Into_Repo.png)
