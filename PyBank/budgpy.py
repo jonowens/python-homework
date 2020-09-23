@@ -5,6 +5,33 @@ from pathlib import Path
 
 
 
+def import_csv_data()
+    '''
+
+    '''
+    # Capture file path to be read
+    csvpath = Path("./Resources/budget_data.csv")
+
+    # Open data in specified path as csv_file 
+    with open(csvpath, 'r') as csv_file:
+
+        # Read data from csv_file knowing the data is ',' delimited and assign to csvreader variable
+        csvreader = csv.reader(csv_file, delimiter=',')
+
+        # Store data header and go to next line
+        header = next(csvreader)
+        print(header)
+        # Iterate through each line of csvreader
+        for row in csvreader:
+            # Assign each row to dictionary structure
+            first_item = row[0]
+            second_item = int(row[1])
+            # Assign dictionary data items to budget list
+            # "pnl" represents Profit and Loss
+            budget.append({'date': first_item, 'pnl': second_item})
+
+
+
 
 def summary_output(number_of_months_in_budget, net_total_amount_of_profits_and_losses, average_of_profit_and_losses, 
 greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
