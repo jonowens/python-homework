@@ -1,5 +1,5 @@
-# The following defined functions are used to assist in the output and calculations for budget metric compilations.
-# Please use Python 3.8.5 and import the following library shown below.
+# The following defined functions are used to assist in the output and calculations for data analysis.
+# Please use Python 3.8.5 and import library 'myfunctions' to use the functions shown below.
 
 from pathlib import Path
 
