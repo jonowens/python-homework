@@ -65,7 +65,7 @@ def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, 
     """
 
     # Value to assign initial greatest increase or decrease in profits or losses
-    initial_assignment_performed = 0
+    initial_assignment_performed = "no"
     # Stores 'Date' and 'PnL' in dictionary
     greatest_change_dictionary = {}
 
@@ -73,7 +73,7 @@ def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, 
     for a_change_in_profits_and_losses_item in change_in_profits_and_losses_list:
         
         # Assignment of initial value to greatest increase from list
-        if initial_assignment_performed == 0:
+        if initial_assignment_performed == "no":
 
             # Assignment of dictionary values to variables
             date_value = a_change_in_profits_and_losses_item["date"]
@@ -84,7 +84,7 @@ def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, 
             greatest_change_dictionary["pnl"] = pnl_value
 
             # Initial assignment of greatest change incremented and no longer needs to be performed
-            initial_assignment_performed = 1
+            initial_assignment_performed = "yes"
 
         # Compare one change value to next value to find the greatest 'increase' in profits
         if greatest_change_dictionary["pnl"] < a_change_in_profits_and_losses_item["pnl"] and increase_or_decrease == "increase":
