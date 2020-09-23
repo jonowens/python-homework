@@ -47,7 +47,7 @@ Output Summary
 3. Navigate into repository file path where the repository downloaded.
 
     ![Navigate to Repository](./Images/PyBank_Navigate_Into_Repo.png)
-
+    
 ---
 
 ## Code Examples
