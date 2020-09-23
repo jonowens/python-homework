@@ -102,3 +102,45 @@ def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, 
     
     # Return greatest increase or decrease dictionary
     return greatest_change_dictionary
+
+
+
+
+def calculate_sum(list_of_dictionaries, key_name):
+    """Accepts a list of dictionaries and loops through the list adding each key value.
+    
+    Args:
+        list_of_dictionaries (list): A list of dictionaries
+        key_name (str): The name of the key in the dictionaries to sum
+
+    Returns:
+        The sum of all the specified key values in the list.
+    """
+
+    # Initialize variables
+    sum = 0
+
+    # Loop through list
+    for a_dictionary in list_of_dictionaries:
+
+        # Add key values to sum variable
+        sum += a_dictionary[key_name]
+        
+    # Return sum
+
+test = [
+    {
+    'Name': "something",
+    'Num': 1234.00
+    },
+    {
+    'Name': "something else",
+    'Num': 5678.10
+    },
+    {
+    'Name': "something more",
+    'Num': 965210.25
+    }
+]
+
+calculate_sum(test, 'Num')
