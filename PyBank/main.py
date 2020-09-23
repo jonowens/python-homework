@@ -83,11 +83,8 @@ for item in budget:
         # Increment count to track next month place holder
         next_month_index += 1
 
-    # Assign current profit and loss value to temporary variable
-    pnl_assignment =  item['pnl']
-
-    # Add and accumulate a total of all profit and losses
-    net_total_amount_of_profits_and_losses += pnl_assignment
+# Add and accumulate a total of all profit and losses
+net_total_amount_of_profits_and_losses = bgy.calculate_sum(budget, "pnl")
 
 
 # %%
@@ -96,8 +93,8 @@ for item in budget:
 # Number of profits and losses
 number_of_profits_and_losses = len(change_in_profits_and_losses_list)
 
-for a_change_of_profits_and_losses in change_in_profits_and_losses_list:
-    total_sum_of_profit_and_loss_changes += a_change_of_profits_and_losses['pnl']
+# Add and accumulate a total running sum of profit and loss changes
+total_sum_of_profit_and_loss_changes = bgy.calculate_sum(change_in_profits_and_losses_list, "pnl")
 
 # Calculate the average of profits and losses
 average_of_profit_and_losses = total_sum_of_profit_and_loss_changes / number_of_profits_and_losses
@@ -117,6 +114,7 @@ greatest_decrease_of_losses_dictionary = bgy.greatest_increase_or_decrease_in_pr
 
 
 # %%
+# Pass metric values into summary_output() and output to screen a summary message along with a summary.txt file
 bgy.summary_output(number_of_months_in_budget, net_total_amount_of_profits_and_losses, average_of_profit_and_losses, greatest_increase_of_profits_dictionary, greatest_decrease_of_losses_dictionary)
 
 
