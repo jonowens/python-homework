@@ -4,6 +4,7 @@
 from pathlib import Path
 
 
+""" In-progress
 
 def import_csv_data()
     '''
@@ -29,7 +30,7 @@ def import_csv_data()
             # Assign dictionary data items to budget list
             # "pnl" represents Profit and Loss
             budget.append({'date': first_item, 'pnl': second_item})
-
+"""
 
 
 
