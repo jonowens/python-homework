@@ -1,5 +1,5 @@
 # python-homework
-    - Assignment to show learning of topics over the last several weeks in Rice University FinTech Bootcamp!
+#### Assignment to show learning of topics over the last several weeks in Rice University FinTech Bootcamp!
 
 ---
 
@@ -15,8 +15,8 @@
 
 ---
 
-## General info
-    * The following repository contains two activities.  The first activity includes resources and files in the PyBank directory to pull in data from a .csv file, analyse the data to find various metrics, and produce a summary to the screen along with a summary.txt file.  The second optional activity relates to the resources and files in the PyRamen directory to pull in data from a .csv file, analyse the data to find various metrics, and produce a report to a .txt file.
+## General Information
+#### The following repository contains two activities.  The first activity includes resources and files in the PyBank directory to pull in data from a .csv file, analyse the data to find various metrics, and produce a summary to the screen along with a summary.txt file.  The second optional activity relates to the resources and files in the PyRamen directory to pull in data from a .csv file, analyse the data to find various metrics, and produce a report to a .txt file.
 
 ---
 
