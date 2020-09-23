@@ -23,7 +23,8 @@
 ## Screenshots
 ![PyBank Initial Run](./Images/PyBank_Initial_Run.png)
 
-![PyBank Initial Run](./Images/PyBank_Output_Summary.png)
+Output Summary
+![PyBank Run Summary](./Images/PyBank_Output_Summary.png)
 
 ---
 
@@ -50,7 +51,36 @@
 ---
 
 ## Code Examples
+- A summary output function to print a specific formatted summary to the screen and output a summary.txt file.
 
+``` python
+def summary_output(number_of_months_in_budget, net_total_amount_of_profits_and_losses, average_of_profit_and_losses, 
+greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
+    # Capture file path to be written
+    output_path = Path("./Output/summary.txt")
+
+    # Open output path 
+    filewriter = open(output_path, 'w+')
+
+    # Formatting individual rows for summary output and concatinates each string
+    summary_message = "" 
+    summary_message += "Financial Analysis\n"
+    summary_message += "----------------------------\n"
+    summary_message += f"Total Months: {number_of_months_in_budget}\n"
+    summary_message += f"Total: ${net_total_amount_of_profits_and_losses}\n"
+    summary_message += f"Average Change: ${average_of_profit_and_losses}\n"
+    summary_message += f"Greatest Increase in Profits: {greatest_change_dictionary['date']} (${greatest_change_dictionary['pnl']})\n"
+    summary_message += f"Greatest Decrease in Profits: {greatest_decrease_of_losses_dictionary['date']} (${greatest_decrease_of_losses_dictionary['pnl']})\n"
+    
+    # Outputs summary message to screen
+    print(summary_message)
+
+    # Writes summary message to output path
+    filewriter.write(summary_message)
+
+    # Closes file
+    filewriter.close()
+```
 
 ---
 
