@@ -101,6 +101,30 @@ greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
 
 
 
+``` python
+def calculate_sum(list_of_dictionaries, key_name):
+    """Accepts a list of dictionaries and loops through the list adding each key value.
+    
+    Args:
+        list_of_dictionaries (list): A list of dictionaries
+        key_name (str): The name of the key in the dictionaries to sum
+
+    Returns:
+        The sum of all the specified key values in the list.
+    """
+
+    # Initialize variables
+    sum = 0
+
+    # Loop through list
+    for a_dictionary in list_of_dictionaries:
+
+        # Add key values to sum variable
+        sum += a_dictionary[key_name]
+        
+    return sum
+```
+
 ---
 
 ## Usage
