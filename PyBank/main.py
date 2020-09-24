@@ -28,7 +28,11 @@ net_total_amount_of_profits_and_losses = 0
 change_in_profits_and_losses_list = []
 average_of_profit_and_losses = 0
 greatest_increase_of_profits_dictionary = {}
+greatest_increase_date = ""
+greatest_increase_value = 0
 greatest_decrease_of_losses_dictionary = {}
+greatest_decrease_date = ""
+greatest_decrease_value = 0
 number_of_profits_and_losses = 0
 net_total_amount_of_profits_and_losses = 0
 total_sum_of_profit_and_loss_changes = 0
@@ -86,17 +90,25 @@ average_of_profit_and_losses = round(average_of_profit_and_losses, 2)
 
 # %%
 # Determines the greatest increase in profits (date and amount) over the entire period and assigns the return values
-greatest_increase_of_profits_dictionary = myfunc.greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, "increase")
+greatest_increase_of_profits_dictionary = myfunc.greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, "increase", "Date", "Profit/Losses")
+
+# Assign greatest increase date and value
+greatest_increase_date = greatest_increase_of_profits_dictionary['Date']
+greatest_increase_value = greatest_increase_of_profits_dictionary['Profit/Losses']
 
 
 # %%
 # Determine the greatest decrease in losses (date and amount) over the entire period and assigns the return values
-greatest_decrease_of_losses_dictionary = myfunc.greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, "decrease")
+greatest_decrease_of_losses_dictionary = myfunc.greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, "decrease", "Date", "Profit/Losses")
+
+# Assign greatest losses date and value
+greatest_decrease_date = greatest_decrease_of_losses_dictionary['Date']
+greatest_decrease_value = greatest_decrease_of_losses_dictionary['Profit/Losses']
 
 
 # %%
 # Pass metric values into summary_output() and output to screen a summary message along with a summary.txt file
-myfunc.summary_output(number_of_months_in_budget, net_total_amount_of_profits_and_losses, average_of_profit_and_losses, greatest_increase_of_profits_dictionary, greatest_decrease_of_losses_dictionary)
+myfunc.summary_output(number_of_months_in_budget, net_total_amount_of_profits_and_losses, average_of_profit_and_losses, greatest_increase_date, greatest_increase_value, greatest_decrease_date, greatest_decrease_value)
 
 
 # %%
