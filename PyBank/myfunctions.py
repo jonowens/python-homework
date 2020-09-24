@@ -250,6 +250,7 @@ def read_in_data(file_name, delimiter_separator, has_headers):
     temp_dict = {}
     num_item = 0
     num_items_in_row = 0
+    header = []
 
     # Capture file path to be read
     csvpath = Path("./Resources/" + file_name)
@@ -275,9 +276,17 @@ def read_in_data(file_name, delimiter_separator, has_headers):
 
                 # Find length of row
                 num_items_in_row = len(row)
-                print(num_items_in_row)
-            # Loop 
 
+                # Loop through rows is not needed at this point
+                break
+
+            # Loop to add generic header names
+            for num in range(0, num_items_in_row):
+                
+                # Create header string and assign to header list
+                name = f"header_name_{num}"
+                header.append(name)
+                print(header)
         # Else inform user header argument must be "yes" or "no"
         else:
             print("Something went wrong.  Passed header value must be 'yes' or 'no'.")
