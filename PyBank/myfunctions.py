@@ -205,7 +205,7 @@ def greatest_increase(list_name):
 
 
 
-def greatest_decrease(list_name):
+def find_largest_number(list_name):
     '''Takes in a list of integers and finds the lowest number.
 
     Args:
