@@ -259,12 +259,18 @@ def read_in_data(file_name, delimiter_separator, has_headers):
         # Read data from csv_file knowing the data is ',' delimited and assign to csvreader variable
         csvreader = csv.reader(csv_file, delimiter=delimiter_separator)
 
-        # Check if data file has header names
-        # If header names equals yes
-        # Then store data header and go to next line
-        header = next(csvreader)
-        # Else
+        # Check if data file has header names from passed in argument
+        # If header names equals "yes"
+        if has_headers == "yes":
+
+            # Then store data header and go to next line
+            header = next(csvreader)
+        # Else if header names equals "no"
+        elif has_headers == "no":
+            
             # 
+            
+        # 
 
         # Iterate through each line of csvreader
         for row in csvreader:
