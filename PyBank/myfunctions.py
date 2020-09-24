@@ -268,19 +268,20 @@ def read_in_data(file_name, delimiter_separator, has_headers):
 
         # Iterate through each line of csvreader
         for row in csvreader:
-
+            
             # Loop through items in row
             for an_item in row:
-            
+                
                 # If item number equals first item, 0
                 if num_value == 0:
-            
+                    
                     # Then add and assign '{' to dictionary string, temp string
                     temp_string += "{"
-
+                                    
                 # Create formatted dictionary string using header name as key and key value
-                temp_string = header[num_value]
-# {header[0]: first_item, header[1]: second_item}
+                # {header[0]: first_item, header[1]: second_item}
+                temp_string += header[num_value]
+
                 
                 # If item number equals last number, length of row
                 if num_value == len(row) - 1:
@@ -290,10 +291,7 @@ def read_in_data(file_name, delimiter_separator, has_headers):
                 
                 # Increment num_value by 1
                 num_value += 1
-
-                # Assign dictionary data items to budget list
-                print(temp_string)
-
+            print(temp_string)
             # Append completed temporary string to list
             temp_list.append(temp_string)
 
