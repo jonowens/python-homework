@@ -60,7 +60,7 @@ for item in budget:
     if next_month_index < len(budget):
     
         # Calculate profit or lose from current month to next month
-        change_value = budget[next_month_index]['Profit/Losses'] - item['Profit/Losses']
+        change_value = budget[next_month_index]["Profit/Losses"] - item["Profit/Losses"]
 
         # Assign profit or loss change to list of dictionaries using 'date' and 'pnl' indicies
         change_in_profits_and_losses_list.append({'Date': budget[next_month_index]["Date"], 'Profit/Losses': change_value})
