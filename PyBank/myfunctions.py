@@ -271,17 +271,16 @@ def read_in_data(file_name, delimiter_separator, has_headers):
             
             # Loop through items in row
             for an_item in row:
-                
+                print(an_item)
                 # If item number equals first item, 0
                 if num_value == 0:
                     
                     # Then add and assign '{' to dictionary string, temp string
-                    temp_string += "{"
-                                    
-                # Create formatted dictionary string using header name as key and key value
-                # {header[0]: first_item, header[1]: second_item}
-                temp_string += header[num_value]
-
+                    temp_string += ("{" + "'" + header[num_value] + "': " + row[num_value])
+                
+                # Else more than one item in a row
+                else:
+                    temp_string +=  (", '" + header[num_value] + "': " + row[num_value])
                 
                 # If item number equals last number, length of row
                 if num_value == len(row) - 1:
@@ -291,6 +290,8 @@ def read_in_data(file_name, delimiter_separator, has_headers):
                 
                 # Increment num_value by 1
                 num_value += 1
+
+            
             print(temp_string)
             # Append completed temporary string to list
             temp_list.append(temp_string)
