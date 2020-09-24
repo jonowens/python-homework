@@ -2,6 +2,7 @@
 # Please use Python 3.8.5 and import library 'myfunctions' to use the functions shown below.
 
 from pathlib import Path
+import csv
 
 
 
@@ -20,14 +21,15 @@ def import_csv_data(file_name):
     # Capture file path to be read
     csvpath = Path("./Resources/" + file_name)
 
-import_csv_data("budget_data.csv")
-'''
     # Open data in specified path as csv_file 
     with open(csvpath, 'r') as csv_file:
 
         # Read data from csv_file knowing the data is ',' delimited and assign to csvreader variable
         csvreader = csv.reader(csv_file, delimiter=',')
 
+        print(csvreader)
+import_csv_data("budget_data.csv")
+'''
         # Store data header and go to next line
         header = next(csvreader)
         print(header)
