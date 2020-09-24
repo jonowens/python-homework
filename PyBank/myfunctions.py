@@ -247,6 +247,8 @@ def read_in_data(file_name, delimiter_separator):
     # Initialize variables
     csvpath = ""
     temp_list = []
+    num_value = 0
+    temp_string = ""
 
     # Capture file path to be read
     csvpath = Path("./Resources/" + file_name)
@@ -264,17 +266,17 @@ def read_in_data(file_name, delimiter_separator):
         for row in csvreader:
             
             # Loop through items in row
-            for item in len(row)
+            for item in len(row):
                 
                 # If item number equals first item, 0
-                # Then assign '{' to dictionary string, temp string
+                if num_value == 0:
+
+                    # Then assign '{' to dictionary string, temp string
+                    
+
                 # if else item number equals last number, length of row
                 # Then assign '{' to dictionary string, temp string
                 # Else create formatted dictionary string using header name as key and key value
-
-                # Assign each row to dictionary structure
-                first_item = row[0]
-                second_item = int(row[1])
 
             # Assign dictionary data items to budget list
             temp_list.append({header[0]: first_item, header[1]: second_item})
