@@ -249,8 +249,6 @@ def read_in_data(file_name, delimiter_separator, has_headers):
     temp_list = []
     temp_dict = {}
     num_item = 0
-    #num_row = 0
-    #temp_string = ""
 
     # Capture file path to be read
     csvpath = Path("./Resources/" + file_name)
@@ -276,44 +274,17 @@ def read_in_data(file_name, delimiter_separator, has_headers):
                 
                 # Assign key and an item to dictionary
                 temp_dict[header[num_item]] = an_item
-                print(temp_dict)
+
                 # Increment number item in header
                 num_item += 1
 
-                '''
-                # If item number equals first item, 0
-                if num_item == 0:
-
-                    # Then add and assign '{' to dictionary string, temp string
-                    temp_string += ("{" + "'" + header[num_item] + "': " + an_item)
-                    
-                # If more than one item in a row
-                if num_item <= len(row) and num_item != 0:
-                    # Then add and assign next key and value to dictionary string, temp string
-                    temp_string +=  (", '" + header[num_item] + "': " + an_item)
-                    
-                # If equal to last item number in row, length of row
-                if num_item == len(row) - 1:
-                    # Assign ending string to finalize dictionary structure
-                    temp_string += "}"
-                                    
-                # Increment num_item by 1
-                num_item += 1
-                '''
             # Append completed temporary string to list
             temp_list.append(temp_dict)
 
             # Clear initial variable values to 0 or null
             num_item = 0
             temp_dict = {}
-            '''
-            temp_string = ""
 
-            # Increment number row variable
-            num_row += 1
-            '''
-
-    print(temp_list)
     return temp_list
 
-read_in_data("budget_data.csv", ",", "yes")
+print(read_in_data("budget_data.csv", ",", "yes"))
