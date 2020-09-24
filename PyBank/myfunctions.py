@@ -4,22 +4,6 @@
 from pathlib import Path
 import csv
 
-def greatest_increase(list_name)
-    # Assign initial greatest variable
-    greatest_variable = 0
-
-    # Loop through list
-    for current_item in list_name:
-
-        # Compare if current item is greater than greatest variable
-        if current_item > greatest_variable:
-
-            # If true then assign current item to greatest variable
-            greatest_variable = current_item
-
-    # Return greatest variable
-    return greatest_variable
-
 
 
 
@@ -190,3 +174,30 @@ def calculate_sum(list_of_dictionaries, key_name):
         sum += a_dictionary[key_name]
         
     return sum
+
+
+
+
+def greatest_increase(list_name):
+    '''Takes in a list of integers and finds the largest number.
+
+    Args:
+        list_name (list): Name of list of numbers
+
+    Returns:
+        The largest value found in the list
+    '''
+    # Assign initial greatest variable
+    greatest_variable = 0
+
+    # Loop through list
+    for current_item in list_name:
+
+        # Compare if current item is greater than greatest variable
+        if current_item > greatest_variable:
+
+            # If true then assign current item to greatest variable
+            greatest_variable = current_item
+
+    # Return greatest variable
+    return greatest_variable
