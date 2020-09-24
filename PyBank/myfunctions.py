@@ -28,9 +28,9 @@ def import_csv_data(file_name, delimiter_separator):
         # Read data from csv_file knowing the data is ',' delimited and assign to csvreader variable
         csvreader = csv.reader(csv_file, delimiter=delimiter_separator)
 
-        print(csvreader)
 import_csv_data("budget_data.csv", ",")
 '''
+
         # Store data header and go to next line
         header = next(csvreader)
         print(header)
