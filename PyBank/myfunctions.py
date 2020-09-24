@@ -270,8 +270,13 @@ def read_in_data(file_name, delimiter_separator, has_headers):
         elif has_headers == "no":
                         
             # Determine number of items in a row
+            # Pull row of data
             for row in csvreader:
-                for item_in_row
+
+                # Find length of row
+                num_items_in_row = len(row)
+                print(num_items_in_row)
+            # Loop 
 
         # Else inform user header argument must be "yes" or "no"
         else:
