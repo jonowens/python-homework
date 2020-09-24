@@ -94,15 +94,17 @@ greatest_increase_date, greatest_increase_number, greatest_decrease_date, greate
 
 
 
-def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, increase_or_decrease):
+def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, increase_or_decrease, key_1, key_2):
     """Determine the greatest increase or decrease in profits (date and amount) over the entire period.
     Change_in_profits_and_losses_list must contain dictionaries including 'Date" and 'Profit/Losses' indicies.
 
     Args:
         change_in_profits_and_losses_list (dict): Changes in profits and losses containing a 'Date' and 'Profit/Losses'
-            (profit and loss) index.
+            key.
         increase_or_decrease (str): Indication to find the greatest "increase" in profits or 
             the greatest "decrease" in profits.
+        key_1 (str): Name of key 1.  Usually a "Date"
+        key_2 (str): name of key 2.  usually a "Profit/Losses" or "Value"
 
     Returns:
         A dictionary of the greatest change with a 'Date' and 'Profit/Losses' (profit and loss) index
@@ -120,29 +122,29 @@ def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, 
         if initial_assignment_performed == "no":
 
             # Assignment of dictionary values to variables
-            date_value = a_change_in_profits_and_losses_item["Date"]
-            pnl_value = a_change_in_profits_and_losses_item["Profit/Losses"]
+            date_value = a_change_in_profits_and_losses_item[key_1]
+            pnl_value = a_change_in_profits_and_losses_item[key_2]
 
             # Initial assignment of values as the greatest change in dictionary
-            greatest_change_dictionary["Date"] = date_value
-            greatest_change_dictionary["Profit/Losses"] = pnl_value
+            greatest_change_dictionary[key_1] = date_value
+            greatest_change_dictionary[key_2] = pnl_value
 
             # Initial assignment of greatest change incremented and no longer needs to be performed
             initial_assignment_performed = "yes"
 
         # Compare one change value to next value to find the greatest 'increase' in profits
-        if greatest_change_dictionary["Profit/Losses"] < a_change_in_profits_and_losses_item["Profit/Losses"] and increase_or_decrease == "increase":
+        if greatest_change_dictionary[key_2] < a_change_in_profits_and_losses_item[key_2] and increase_or_decrease == "increase":
             
             # Assign profits and losses current item value and date to greatest change dictionary
-            greatest_change_dictionary["Date"] = a_change_in_profits_and_losses_item["Date"]
-            greatest_change_dictionary["Profit/Losses"] = a_change_in_profits_and_losses_item["Profit/Losses"]
+            greatest_change_dictionary[key_1] = a_change_in_profits_and_losses_item[key_1]
+            greatest_change_dictionary[key_2] = a_change_in_profits_and_losses_item[key_2]
     
         # Compare one change value to next value to find the greatest 'decrease' in losses
-        elif greatest_change_dictionary["Profit/Losses"] > a_change_in_profits_and_losses_item["Profit/Losses"] and increase_or_decrease == "decrease":
+        elif greatest_change_dictionary[key_2] > a_change_in_profits_and_losses_item[key_2] and increase_or_decrease == "decrease":
             
             # Assign profits and losses current item value and date to greatest decrease of losses dictionary
-            greatest_change_dictionary["Date"] = a_change_in_profits_and_losses_item["Date"]
-            greatest_change_dictionary["Profit/Losses"] = a_change_in_profits_and_losses_item["Profit/Losses"]
+            greatest_change_dictionary[key_1] = a_change_in_profits_and_losses_item[key_1]
+            greatest_change_dictionary[key_2] = a_change_in_profits_and_losses_item[key_2]
     
     # Return greatest increase or decrease dictionary
     return greatest_change_dictionary
