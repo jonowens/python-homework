@@ -12,7 +12,7 @@ def import_csv_data(file_name)
         file_name (str): Name of data file (Example: "data.csv")
 
     Returns: 
-        A list of dictionaries with 
+        A list of dictionaries with assigned values from csv file
     '''
     # Capture file path to be read
     csvpath = Path("./Resources/budget_data.csv")
