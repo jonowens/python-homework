@@ -104,7 +104,7 @@ def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, 
         increase_or_decrease (str): Indication to find the greatest "increase" in profits or 
             the greatest "decrease" in profits.
         key_1 (str): Name of key 1.  Usually a "Date"
-        key_2 (str): name of key 2.  usually a "Profit/Losses" or "Value"
+        key_2 (str): name of key 2.  Usually a "Profit/Losses" or "Value"
 
     Returns:
         A dictionary of the greatest change with a 'Date' and 'Profit/Losses' (profit and loss) index
