@@ -144,7 +144,7 @@ def calculate_sum(list_of_dictionaries, key_name):
 
 ## Status
 Project is:
-    - PyBank: _in progress_
+    - PyBank: _complete_
     - PyMenu: _in progress_
 
 ---

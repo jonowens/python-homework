@@ -299,8 +299,8 @@ def read_in_data(file_name, delimiter_separator, has_headers):
             for an_item in row:
                 
                 # check if number
-                if an_item.isnumeric() == True:
-                    print("True")
+                #if an_item.isnumeric() == True:
+                #    print("True")
                 # Assign key and an item to dictionary
                 temp_dict[header[num_item]] = an_item
 
@@ -315,6 +315,3 @@ def read_in_data(file_name, delimiter_separator, has_headers):
             temp_dict = {}
 
     return temp_list
-
-
-read_in_data("budget_data.csv", ",", "yes")
