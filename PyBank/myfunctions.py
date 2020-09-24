@@ -312,5 +312,3 @@ def read_in_data(file_name, delimiter_separator, has_headers):
             temp_dict = {}
 
     return temp_list
-
-read_in_data("budget_data.csv", ",", "no")
