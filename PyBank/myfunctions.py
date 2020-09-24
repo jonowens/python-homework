@@ -268,7 +268,7 @@ def read_in_data(file_name, delimiter_separator, has_headers):
         # Else if header names equals "no"
         elif has_headers == "no":
             print("test")
-            #header = next(csvreader)
+            header = next(csvreader)
             #print(csvreader.line_num[0])
         # Else inform user header argument must be "yes" or "no"
         else:
@@ -296,4 +296,4 @@ def read_in_data(file_name, delimiter_separator, has_headers):
 
     return temp_list
 
-read_in_data("budget_data.csv", ",", "test")
+read_in_data("budget_data.csv", ",", "no")
