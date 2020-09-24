@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 
-def import_csv_data(file_name)
+def import_csv_data(file_name):
     '''Reads data from a .csv file and creates a list of dictionaries with the data.
     
     Args: 
@@ -14,9 +14,14 @@ def import_csv_data(file_name)
     Returns: 
         A list of dictionaries with assigned values from csv file
     '''
-    # Capture file path to be read
-    csvpath = Path("./Resources/budget_data.csv")
+    # Initialize variables
+    csvpath = ""
 
+    # Capture file path to be read
+    csvpath = Path("./Resources/" + file_name)
+
+import_csv_data("budget_data.csv")
+'''
     # Open data in specified path as csv_file 
     with open(csvpath, 'r') as csv_file:
 
@@ -34,7 +39,7 @@ def import_csv_data(file_name)
             # Assign dictionary data items to budget list
             # "pnl" represents Profit and Loss
             budget.append({'date': first_item, 'pnl': second_item})
-
+'''
 
 
 
