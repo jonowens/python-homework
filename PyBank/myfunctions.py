@@ -228,3 +228,57 @@ def smallest_number(list_name):
 
     # Return greatest variable
     return lowest_variable
+
+
+
+
+def read_in_data(file_name, delimiter_separator):
+    '''Reads data from a .csv file and creates a list of dictionaries with the data.
+        The function accepts two attributes per row with the second attribute being an
+        integer.
+    
+    Args: 
+        file_name (str): Name of data file (Example: "data.csv")
+        delimiter_separator (str): Character(s) separating values in csv file
+
+    Returns: 
+        A list of dictionaries with assigned values from csv file
+    '''    
+    # Initialize variables
+    csvpath = ""
+    temp_list = []
+
+    # Capture file path to be read
+    csvpath = Path("./Resources/" + file_name)
+
+    # Open data in specified path as csv_file 
+    with open(csvpath, 'r') as csv_file:
+
+        # Read data from csv_file knowing the data is ',' delimited and assign to csvreader variable
+        csvreader = csv.reader(csv_file, delimiter=delimiter_separator)
+
+        # Store data header and go to next line
+        header = next(csvreader)
+
+        # Iterate through each line of csvreader
+        for row in csvreader:
+            
+            # Loop through items in row
+            for item in len(row)
+                
+                # If item number equals first item, 0
+                # Then assign '{' to dictionary string, temp string
+                # if else item number equals last number, length of row
+                # Then assign '{' to dictionary string, temp string
+                # Else create formatted dictionary string using header name as key and key value
+
+                # Assign each row to dictionary structure
+                first_item = row[0]
+                second_item = int(row[1])
+
+            # Assign dictionary data items to budget list
+            temp_list.append({header[0]: first_item, header[1]: second_item})
+
+    return temp_list
+
+read_in_data("budget_data.csv", ",")
