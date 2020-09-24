@@ -12,7 +12,7 @@ def import_csv_data(file_name, delimiter_separator, has_header):
     Args: 
         file_name (str): Name of data file (Example: "data.csv")
         delimiter_separator (str): Character(s) separating values in csv file
-        header (str): Does file contain header name(s)
+        has_header (str): Does file contain header name(s)
 
     Returns: 
         A list of dictionaries with assigned values from csv file
