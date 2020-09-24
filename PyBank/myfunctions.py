@@ -272,11 +272,14 @@ def read_in_data(file_name, delimiter_separator):
                 if num_value == 0:
 
                     # Then assign '{' to dictionary string, temp string
+                    temp_string = "{"
                     
 
-                # if else item number equals last number, length of row
-                # Then assign '{' to dictionary string, temp string
-                # Else create formatted dictionary string using header name as key and key value
+                # If item number equals last number, length of row
+                # Then assign '}' to dictionary string, temp string
+                # Create formatted dictionary string using header name as key and key value
+                # Increment num_value by 1
+                num_value += 1
 
             # Assign dictionary data items to budget list
             temp_list.append({header[0]: first_item, header[1]: second_item})
