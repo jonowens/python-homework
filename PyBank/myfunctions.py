@@ -4,6 +4,23 @@
 from pathlib import Path
 import csv
 
+def greatest_increase(list_name)
+    # Assign initial greatest variable
+    greatest_variable = 0
+
+    # Loop through list
+    for current_item in list_name:
+
+        # Compare if current item is greater than greatest variable
+        if current_item > greatest_variable:
+
+            # If true then assign current item to greatest variable
+            greatest_variable = current_item
+
+    # Return greatest variable
+    return greatest_variable
+
+
 
 
 def import_csv_data(file_name, delimiter_separator):
