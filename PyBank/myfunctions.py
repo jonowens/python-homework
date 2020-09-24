@@ -249,6 +249,7 @@ def read_in_data(file_name, delimiter_separator, has_headers):
     temp_list = []
     temp_dict = {}
     num_item = 0
+    num_items_in_row = 0
 
     # Capture file path to be read
     csvpath = Path("./Resources/" + file_name)
@@ -267,9 +268,11 @@ def read_in_data(file_name, delimiter_separator, has_headers):
             header = next(csvreader)
         # Else if header names equals "no"
         elif has_headers == "no":
-            print("test")
-            header = next(csvreader)
-            #print(csvreader.line_num[0])
+                        
+            # Determine number of items in a row
+            for row in csvreader:
+                for item_in_row
+
         # Else inform user header argument must be "yes" or "no"
         else:
             print("Something went wrong.  Passed header value must be 'yes' or 'no'.")
