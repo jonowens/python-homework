@@ -39,14 +39,17 @@ def import_csv_data(file_name, delimiter_separator, has_header):
             # Determine number of values in one row of header
             num_values_in_row = len(header)
 
-import_csv_data("budget_data.csv", ",", "yes")
-'''
         # Iterate through each line of csvreader
         for row in csvreader:
+            print(row)
 
-            # Assign each row to dictionary structure
-            first_item = row[0]
-            second_item = int(row[1])
+import_csv_data("budget_data.csv", ",", "yes")
+'''
+            # Loop through each value in row
+            for value in num_values_in_row:
+                first_item = row[0]
+                second_item = int(row[1])
+
             # Assign dictionary data items to budget list
             # "pnl" represents Profit and Loss
             budget.append({'date': first_item, 'pnl': second_item})
