@@ -6,21 +6,19 @@ import csv
 
 
 
-def import_csv_data(file_name, delimiter_separator, has_header):
+def import_csv_data(file_name, delimiter_separator):
     '''Reads data from a .csv file and creates a list of dictionaries with the data.
     
     Args: 
         file_name (str): Name of data file (Example: "data.csv")
         delimiter_separator (str): Character(s) separating values in csv file
-        has_header (str): Does file contain header name(s)
 
     Returns: 
         A list of dictionaries with assigned values from csv file
     '''
     # Initialize variables
     csvpath = ""
-    num_values_in_row = 0
-    
+
     # Capture file path to be read
     csvpath = Path("./Resources/" + file_name)
 
@@ -30,26 +28,17 @@ def import_csv_data(file_name, delimiter_separator, has_header):
         # Read data from csv_file knowing the data is ',' delimited and assign to csvreader variable
         csvreader = csv.reader(csv_file, delimiter=delimiter_separator)
 
-        # To capture header information if available
-        if (has_header == "yes"):
-            
-            # Store data header and go to next line
-            header = next(csvreader)
-            
-            # Determine number of values in one row of header
-            num_values_in_row = len(header)
 
+import_csv_data("budget_data.csv", ",")
+'''
+        # Store data header and go to next line
+        header = next(csvreader)
+        print(header)
         # Iterate through each line of csvreader
         for row in csvreader:
-            print(row)
-
-import_csv_data("budget_data.csv", ",", "yes")
-'''
-            # Loop through each value in row
-            for value in num_values_in_row:
-                first_item = row[0]
-                second_item = int(row[1])
-
+            # Assign each row to dictionary structure
+            first_item = row[0]
+            second_item = int(row[1])
             # Assign dictionary data items to budget list
             # "pnl" represents Profit and Loss
             budget.append({'date': first_item, 'pnl': second_item})
