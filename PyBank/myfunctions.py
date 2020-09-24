@@ -178,7 +178,7 @@ def calculate_sum(list_of_dictionaries, key_name):
 
 
 
-def greatest_increase(list_name):
+def largest_number(list_name):
     '''Takes in a list of integers and finds the largest number.
 
     Args:
