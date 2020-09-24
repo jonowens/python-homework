@@ -6,11 +6,12 @@ import csv
 
 
 
-def import_csv_data(file_name):
+def import_csv_data(file_name, delimiter_separator):
     '''Reads data from a .csv file and creates a list of dictionaries with the data.
     
     Args: 
         file_name (str): Name of data file (Example: "data.csv")
+        delimiter_separator (str): Character(s) separating values in csv file
 
     Returns: 
         A list of dictionaries with assigned values from csv file
@@ -25,10 +26,10 @@ def import_csv_data(file_name):
     with open(csvpath, 'r') as csv_file:
 
         # Read data from csv_file knowing the data is ',' delimited and assign to csvreader variable
-        csvreader = csv.reader(csv_file, delimiter=',')
+        csvreader = csv.reader(csv_file, delimiter=delimiter_separator)
 
         print(csvreader)
-import_csv_data("budget_data.csv")
+import_csv_data("budget_data.csv", ",")
 '''
         # Store data header and go to next line
         header = next(csvreader)
