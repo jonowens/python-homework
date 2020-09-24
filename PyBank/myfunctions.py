@@ -264,19 +264,22 @@ def read_in_data(file_name, delimiter_separator):
 
         # Iterate through each line of csvreader
         for row in csvreader:
-            
+
             # Loop through items in row
             for item in len(row):
-                
+            
                 # If item number equals first item, 0
                 if num_value == 0:
-
+            
                     # Then assign '{' to dictionary string, temp string
                     temp_string = "{"
-                    
-
+            
                 # If item number equals last number, length of row
-                # Then assign '}' to dictionary string, temp string
+                if num_value == len(row) - 1:
+            
+                    # Then assign '}' to dictionary string, temp string
+                    temp_string = "}"
+            
                 # Create formatted dictionary string using header name as key and key value
                 # Increment num_value by 1
                 num_value += 1
