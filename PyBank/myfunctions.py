@@ -201,3 +201,30 @@ def greatest_increase(list_name):
 
     # Return greatest variable
     return greatest_variable
+
+
+
+
+def greatest_decrease(list_name):
+    '''Takes in a list of integers and finds the lowest number.
+
+    Args:
+        list_name (list): Name of list of numbers
+
+    Returns:
+        The lowest value found in the list
+    '''
+    # Assign initial greatest variable
+    lowest_variable = 0
+
+    # Loop through list
+    for current_item in list_name:
+
+        # Compare if current item is greater than greatest variable
+        if current_item < lowest_variable:
+
+            # If true then assign current item to greatest variable
+            lowest_variable = current_item
+
+    # Return greatest variable
+    return lowest_variable
