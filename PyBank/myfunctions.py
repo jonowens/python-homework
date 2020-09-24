@@ -19,7 +19,8 @@ def import_csv_data(file_name, delimiter_separator, has_header):
     '''
     # Initialize variables
     csvpath = ""
-
+    num_values_in_row = 0
+    
     # Capture file path to be read
     csvpath = Path("./Resources/" + file_name)
 
@@ -34,14 +35,15 @@ def import_csv_data(file_name, delimiter_separator, has_header):
             
             # Store data header and go to next line
             header = next(csvreader)
-        else:
             
+            # Determine number of values in one row of header
+            num_values_in_row = len(header)
 
-        print(csvreader)
 import_csv_data("budget_data.csv", ",", "yes")
 '''
         # Iterate through each line of csvreader
         for row in csvreader:
+
             # Assign each row to dictionary structure
             first_item = row[0]
             second_item = int(row[1])
