@@ -6,12 +6,13 @@ import csv
 
 
 
-def import_csv_data(file_name, delimiter_separator):
+def import_csv_data(file_name, delimiter_separator, has_header):
     '''Reads data from a .csv file and creates a list of dictionaries with the data.
     
     Args: 
         file_name (str): Name of data file (Example: "data.csv")
         delimiter_separator (str): Character(s) separating values in csv file
+        header (str): Does file contain header name(s)
 
     Returns: 
         A list of dictionaries with assigned values from csv file
@@ -28,12 +29,17 @@ def import_csv_data(file_name, delimiter_separator):
         # Read data from csv_file knowing the data is ',' delimited and assign to csvreader variable
         csvreader = csv.reader(csv_file, delimiter=delimiter_separator)
 
-import_csv_data("budget_data.csv", ",")
-'''
+        # To capture header information if available
+        if (has_header == "yes"):
+            
+            # Store data header and go to next line
+            header = next(csvreader)
+        else:
+            
 
-        # Store data header and go to next line
-        header = next(csvreader)
-        print(header)
+        print(csvreader)
+import_csv_data("budget_data.csv", ",", "yes")
+'''
         # Iterate through each line of csvreader
         for row in csvreader:
             # Assign each row to dictionary structure
