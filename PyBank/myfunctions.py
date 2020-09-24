@@ -4,11 +4,15 @@
 from pathlib import Path
 
 
-""" In-progress
 
-def import_csv_data()
-    '''
+def import_csv_data(file_name)
+    '''Reads data from a .csv file and creates a list of dictionaries with the data.
+    
+    Args: 
+        file_name (str): Name of data file (Example: "data.csv")
 
+    Returns: 
+        A list of dictionaries with 
     '''
     # Capture file path to be read
     csvpath = Path("./Resources/budget_data.csv")
@@ -30,7 +34,7 @@ def import_csv_data()
             # Assign dictionary data items to budget list
             # "pnl" represents Profit and Loss
             budget.append({'date': first_item, 'pnl': second_item})
-"""
+
 
 
 
