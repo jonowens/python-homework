@@ -49,7 +49,7 @@ def import_csv_data(file_name, delimiter_separator):
 
 
 def summary_output(number_of_months_in_budget, net_total_amount_of_profits_and_losses, average_of_profit_and_losses, 
-greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
+greatest_increase_date, greatest_increase_number, greatest_decrease_date, greatest_decrease_number):
     """Accepts metric variables and prints a standard output to the screen along with a summary.txt file to a Resources directory.
     The dictionaries must contain 'date' and 'pnl' indecies.
     
@@ -57,8 +57,10 @@ greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
         number_of_months_in_budget (int): The number of months in the budget
         net_total_amount_of_profits_and_losses (int): The total amount of combined profits and losses.
         average_of_profit_and_losses (int): The average value of profits and losses.
-        greatest_change_dictionary (dict): The greatest change with a 'date' and 'pnl' (profit and loss) index
-        greatest_decrease_of_losses_dictionary (dict):  The greatest decrease of losses with a 'date' and 'pnl' (profit and loss) index
+        greatest_increase_date (str): The greatest increase date
+        greatest_increase_number (int): The greatest increase number
+        greatest_decrease_date (str): The greatest loss date
+        greatest_decrease_number (int): The greatest loss number
 
     Output:
         Outputs summary message to screen and ./Output/summary.txt
@@ -77,8 +79,8 @@ greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
     summary_message += f"Total Months: {number_of_months_in_budget}\n"
     summary_message += f"Total: ${net_total_amount_of_profits_and_losses}\n"
     summary_message += f"Average Change: ${average_of_profit_and_losses}\n"
-    summary_message += f"Greatest Increase in Profits: {greatest_change_dictionary['Date']} (${greatest_change_dictionary['Profit/Losses']})\n"
-    summary_message += f"Greatest Decrease in Profits: {greatest_decrease_of_losses_dictionary['Date']} (${greatest_decrease_of_losses_dictionary['Profit/Losses']})\n"
+    summary_message += f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase_number})\n"
+    summary_message += f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease_number})\n"
     
     # Outputs summary message to screen
     print(summary_message)
