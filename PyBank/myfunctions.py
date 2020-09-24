@@ -286,7 +286,7 @@ def read_in_data(file_name, delimiter_separator, has_headers):
                 # Create header string and assign to header list
                 name = f"header_name_{num}"
                 header.append(name)
-                print(header)
+
         # Else inform user header argument must be "yes" or "no"
         else:
             print("Something went wrong.  Passed header value must be 'yes' or 'no'.")
