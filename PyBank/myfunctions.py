@@ -232,22 +232,23 @@ def smallest_number(list_name):
 
 
 
-def read_in_data(file_name, delimiter_separator):
+def read_in_data(file_name, delimiter_separator, has_headers):
     '''Reads data from a .csv file and creates a list of dictionaries with the data.
-        The function accepts two attributes per row with the second attribute being an
-        integer.
+        The function accepts multiple attributes.
     
     Args: 
         file_name (str): Name of data file (Example: "data.csv")
         delimiter_separator (str): Character(s) separating values in csv file
+        has_header (str): Does the data file contain header names, "yes" or "no"
 
     Returns: 
-        A list of dictionaries with assigned values from csv file
+        A list of dictionaries with assigned values from csv file with header names
     '''    
     # Initialize variables
     csvpath = ""
     temp_list = []
     num_value = 0
+    temp_string = ""
 
     # Capture file path to be read
     csvpath = Path("./Resources/" + file_name)
@@ -258,38 +259,48 @@ def read_in_data(file_name, delimiter_separator):
         # Read data from csv_file knowing the data is ',' delimited and assign to csvreader variable
         csvreader = csv.reader(csv_file, delimiter=delimiter_separator)
 
-        # Store data header and go to next line
+        # Check if data file has header names
+        # If header names equals yes
+        # Then store data header and go to next line
         header = next(csvreader)
-        print(len(header))
+        # Else
+            # 
+
         # Iterate through each line of csvreader
         for row in csvreader:
 
             # Loop through items in row
-            for an_item in len(row):
+            for an_item in row:
             
                 # If item number equals first item, 0
                 if num_value == 0:
             
                     # Then add and assign '{' to dictionary string, temp string
                     temp_string += "{"
-            
+
+                # Create formatted dictionary string using header name as key and key value
+                temp_string = header[num_value]
+# {header[0]: first_item, header[1]: second_item}
+                
                 # If item number equals last number, length of row
                 if num_value == len(row) - 1:
             
                     # Then add and assign '}' to dictionary string, temp string
                     temp_string += "}"
-            
-                # Create formatted dictionary string using header name as key and key value
                 
-                # Assign dictionary data items to budget list
-                temp_string += ""
-
                 # Increment num_value by 1
                 num_value += 1
 
-# {header[0]: first_item, header[1]: second_item}
-        temp_list.append(temp_string)
+                # Assign dictionary data items to budget list
+                print(temp_string)
+
+            # Append completed temporary string to list
+            temp_list.append(temp_string)
+
+            # Reset line variables num_value to 0
+            num_value = 0
+            temp_string = ""
 
     return temp_list
 
-read_in_data("budget_data.csv", ",")
+read_in_data("budget_data.csv", ",", "yes")
