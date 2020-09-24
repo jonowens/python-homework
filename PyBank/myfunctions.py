@@ -96,16 +96,16 @@ greatest_increase_date, greatest_increase_number, greatest_decrease_date, greate
 
 def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, increase_or_decrease):
     """Determine the greatest increase or decrease in profits (date and amount) over the entire period.
-    Change_in_profits_and_losses_list must contain dictionaries including 'date" and 'pnl' indicies.
+    Change_in_profits_and_losses_list must contain dictionaries including 'Date" and 'Profit/Losses' indicies.
 
     Args:
-        change_in_profits_and_losses_list (dict): Changes in profits and losses containing a 'date' and 'pnl'
+        change_in_profits_and_losses_list (dict): Changes in profits and losses containing a 'Date' and 'Profit/Losses'
             (profit and loss) index.
         increase_or_decrease (str): Indication to find the greatest "increase" in profits or 
             the greatest "decrease" in profits.
 
     Returns:
-        A dictionary of the greatest change with a 'date' and 'pnl' (profit and loss) index
+        A dictionary of the greatest change with a 'Date' and 'Profit/Losses' (profit and loss) index
     """
 
     # Value to assign initial greatest increase or decrease in profits or losses
