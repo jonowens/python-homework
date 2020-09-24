@@ -35,7 +35,7 @@ Output Summary
     * Jupyter Notebook - Version 6.1.1
     * Windows 10
     * Library - pathlib
-    * Library - budgpy
+    * Library - myfunctions
 
 ---
 
@@ -99,7 +99,7 @@ greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
     filewriter.close()
 ```
 
-
+- A function to calculate the sum of key values in a list of dictionaries and return the sum.
 
 ``` python
 def calculate_sum(list_of_dictionaries, key_name):
