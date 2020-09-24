@@ -17,7 +17,7 @@ def import_csv_data(file_name, delimiter_separator):
 
     Returns: 
         A list of dictionaries with assigned values from csv file
-    '''
+    '''    
     # Initialize variables
     csvpath = ""
     temp_list = []
@@ -77,8 +77,8 @@ greatest_change_dictionary, greatest_decrease_of_losses_dictionary):
     summary_message += f"Total Months: {number_of_months_in_budget}\n"
     summary_message += f"Total: ${net_total_amount_of_profits_and_losses}\n"
     summary_message += f"Average Change: ${average_of_profit_and_losses}\n"
-    summary_message += f"Greatest Increase in Profits: {greatest_change_dictionary['date']} (${greatest_change_dictionary['pnl']})\n"
-    summary_message += f"Greatest Decrease in Profits: {greatest_decrease_of_losses_dictionary['date']} (${greatest_decrease_of_losses_dictionary['pnl']})\n"
+    summary_message += f"Greatest Increase in Profits: {greatest_change_dictionary['Date']} (${greatest_change_dictionary['Profit/Losses']})\n"
+    summary_message += f"Greatest Decrease in Profits: {greatest_decrease_of_losses_dictionary['Date']} (${greatest_decrease_of_losses_dictionary['Profit/Losses']})\n"
     
     # Outputs summary message to screen
     print(summary_message)
@@ -118,29 +118,29 @@ def greatest_increase_or_decrease_in_profits(change_in_profits_and_losses_list, 
         if initial_assignment_performed == "no":
 
             # Assignment of dictionary values to variables
-            date_value = a_change_in_profits_and_losses_item["date"]
-            pnl_value = a_change_in_profits_and_losses_item["pnl"]
+            date_value = a_change_in_profits_and_losses_item["Date"]
+            pnl_value = a_change_in_profits_and_losses_item["Profit/Losses"]
 
             # Initial assignment of values as the greatest change in dictionary
-            greatest_change_dictionary["date"] = date_value
-            greatest_change_dictionary["pnl"] = pnl_value
+            greatest_change_dictionary["Date"] = date_value
+            greatest_change_dictionary["Profit/Losses"] = pnl_value
 
             # Initial assignment of greatest change incremented and no longer needs to be performed
             initial_assignment_performed = "yes"
 
         # Compare one change value to next value to find the greatest 'increase' in profits
-        if greatest_change_dictionary["pnl"] < a_change_in_profits_and_losses_item["pnl"] and increase_or_decrease == "increase":
+        if greatest_change_dictionary["Profit/Losses"] < a_change_in_profits_and_losses_item["Profit/Losses"] and increase_or_decrease == "increase":
             
             # Assign profits and losses current item value and date to greatest change dictionary
-            greatest_change_dictionary["date"] = a_change_in_profits_and_losses_item["date"]
-            greatest_change_dictionary["pnl"] = a_change_in_profits_and_losses_item["pnl"]
+            greatest_change_dictionary["Date"] = a_change_in_profits_and_losses_item["Date"]
+            greatest_change_dictionary["Profit/Losses"] = a_change_in_profits_and_losses_item["Profit/Losses"]
     
         # Compare one change value to next value to find the greatest 'decrease' in losses
-        elif greatest_change_dictionary["pnl"] > a_change_in_profits_and_losses_item["pnl"] and increase_or_decrease == "decrease":
+        elif greatest_change_dictionary["Profit/Losses"] > a_change_in_profits_and_losses_item["Profit/Losses"] and increase_or_decrease == "decrease":
             
             # Assign profits and losses current item value and date to greatest decrease of losses dictionary
-            greatest_change_dictionary["date"] = a_change_in_profits_and_losses_item["date"]
-            greatest_change_dictionary["pnl"] = a_change_in_profits_and_losses_item["pnl"]
+            greatest_change_dictionary["Date"] = a_change_in_profits_and_losses_item["Date"]
+            greatest_change_dictionary["Profit/Losses"] = a_change_in_profits_and_losses_item["Profit/Losses"]
     
     # Return greatest increase or decrease dictionary
     return greatest_change_dictionary
