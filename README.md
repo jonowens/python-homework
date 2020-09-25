@@ -49,7 +49,7 @@ Output Summary
 
     ![Navigate to Repository](./Images/PyBank_Navigate_Into_Repo.png)
 
-4. The files should be visible and ready to run.  *See usage [Usage](#usage) section below for instructions on how to run the program.
+4. The files should be visible and ready to run.  *See [Usage](#usage) section below for instructions on how to run the program.
     
 ---
 
