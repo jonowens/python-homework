@@ -146,7 +146,7 @@ def calculate_sum(list_of_dictionaries, key_name):
 
     ![Run All Cells](./Images/PyBank_Click_Run_All_Cells.png)
 
-3. The program runs and summary outputs to the screen and creates a summary.txt file in the OutPut directory of the PyBank folder.
+5. All cells in the notbook run and a summary displays at the bottom of the screen along with a summary.txt file created in the root of the PyBank directory.
 
     ![PyBank Summary Output](./Images/PyBank_Output_Summary.png)
 
