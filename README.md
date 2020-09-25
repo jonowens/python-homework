@@ -130,9 +130,9 @@ def calculate_sum(list_of_dictionaries, key_name):
 ---
 
 ## Usage
-1. To run the process navigate to the directory where main.py is located using Git Terminal.
+1. To run the process navigate to the directory where main.ipynb is located using Git Terminal.
 
-    ![Navigate to Repository for main.py](./Images/PyBank_Path_Where_Main.py_Is_Located.png)
+    ![Navigate to Repository for main.py](./Images/PyBank_Path_Where_Main.ipynb_Is_Located.png)
 
 2. Execute the command 'python main.py' in the terminal.
 
