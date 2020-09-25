@@ -63,7 +63,7 @@ greatest_increase_date, greatest_increase_number, greatest_decrease_date, greate
     """
 
     # Capture file path to be written
-    output_path = Path("./Output/summary.txt")
+    output_path = Path("./summary.txt")
 
     # Open output path 
     filewriter = open(output_path, 'w+')
