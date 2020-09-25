@@ -47,7 +47,8 @@ def import_csv_data(file_name, delimiter_separator):
 
 def summary_output(number_of_months_in_budget, net_total_amount_of_profits_and_losses, average_of_profit_and_losses, 
 greatest_increase_date, greatest_increase_number, greatest_decrease_date, greatest_decrease_number):
-    """Accepts metric variables and prints a standard output to the screen along with a summary.txt file to a Resources directory.
+    """Accepts metric variables and prints a standard output to the screen along with a summary.txt file to the 
+        same location as the myfunctions libary.
     
     Args:
         number_of_months_in_budget (int): The number of months in the budget
