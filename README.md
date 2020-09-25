@@ -140,7 +140,7 @@ def calculate_sum(list_of_dictionaries, key_name):
 
 3. VS Code opens.  Select the main.ipynb file in the PyBank directory.
 
-    ![Open VS Code and select main.ipynb](./Images/)
+    ![Open VS Code and select main.ipynb](./Images/PyBank_OpenVS_Select_Main.ipynb.png)
 
 3. The program runs and summary outputs to the screen and creates a summary.txt file in the OutPut directory of the PyBank folder.
 
