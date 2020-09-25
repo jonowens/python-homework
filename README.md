@@ -142,6 +142,10 @@ def calculate_sum(list_of_dictionaries, key_name):
 
     ![Open VS Code and select main.ipynb](./Images/PyBank_OpenVS_Select_Main.ipynb.png)
 
+4. Click the Run All Cells button, double arrows, to run all cell in the Jupyter Notebook file.
+
+    ![Run All Cells](./Images/PyBank_Click_Run_All_Cells.png)
+
 3. The program runs and summary outputs to the screen and creates a summary.txt file in the OutPut directory of the PyBank folder.
 
     ![PyBank Summary Output](./Images/PyBank_Output_Summary.png)
