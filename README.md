@@ -21,6 +21,7 @@
 ---
 
 ## Screenshots
+* PyBank information shown below
 ![PyBank Initial Run](./Images/PyBank_Initial_Run.png)
 
 Output Summary
@@ -50,11 +51,13 @@ Output Summary
     ![Navigate to Repository](./Images/PyBank_Navigate_Into_Repo.png)
 
 4. The files should be visible and ready to run.  *See [Usage](#usage) section below for instructions on how to run the program.
+
+* Optional: PyRamen data files are included in the same repository for easy access.
     
 ---
 
 ## Code Examples
-- A summary output function to print a specific formatted summary to the screen and output a summary.txt file.
+- PyBank: A summary output function to print a specific formatted summary to the screen and output a summary.txt file.
 
 ``` python
 def summary_output(number_of_months_in_budget, net_total_amount_of_profits_and_losses, average_of_profit_and_losses, 
@@ -130,7 +133,7 @@ def calculate_sum(list_of_dictionaries, key_name):
 ---
 
 ## Usage
-1. To run the process navigate to the directory where main.ipynb is located using Git Terminal.
+1. To run the process, navigate to the directory where main.ipynb is located using Git Terminal within the PyBank directory.  The PyRamen process can be run using the same steps below by navigating to the PyRamen directory.  PyRamen will only produce a summary.txt file.
 
     ![Navigate to Repository for main.py](./Images/PyBank_Path_Where_Main.ipynb_Is_Located.png)
 
@@ -157,7 +160,7 @@ def calculate_sum(list_of_dictionaries, key_name):
 ## Status
 Project is:
     - PyBank: _complete_
-    - PyMenu: _in progress_
+    - PyMenu: _complete_
 
 ---
 
