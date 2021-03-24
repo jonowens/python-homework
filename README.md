@@ -165,4 +165,7 @@ Project is:
 ---
 
 ## Contributors
-Jonathan Owens, jonathan.owens@gmail.com
+
+* Jonathan Owens
+* LinkedIn: www.linkedin.com/in/jonowens
+
